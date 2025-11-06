@@ -23,4 +23,7 @@ CSS3 — For layout, design, and responsive styling.<br>
 
 JavaScript (Vanilla) — For interactivity, API calls, and dynamic content.<br>
 
-TheMealDB API.
+TheMealDB API.<br><br>
+
+A simple and responsive Recipe App built using HTML, CSS, and JavaScript.  
+👉 **Live Demo:** [Click here to try it out!](https://github.com/abhaykumardev/recipe_app)
