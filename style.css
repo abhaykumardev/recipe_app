@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+ background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+
+  color: white;
+}
+header nav {
+background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+header nav h1 {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+header nav form {
+  display: flex;
+  justify-content: center;
+}
+
+form input[type="text"] {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+form input[type="text"],
+button[type="submit"] {
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+
+}
+
+form button[type="submit"]:hover {
+  background-color: rgb(7, 96, 21);
+  cursor: pointer;
+}
+
+/* main section */
+
+.recipe-container {
+  text-align: center;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-gap: 40px;
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px;
+  place-items: center;
+}
+
+.recipe img {
+  height: 200px;
+}
+
+.recipe h3 {
+  font-size: 22px;
+  margin-block: 3px;
+}
+.recipe p {
+  font-size: 18px;
+  color: rgb(46, 45, 45);
+  margin: 5px 0;
+}
+.recipe span {
+  font-weight: 900;
+}
+
+.recipe button {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px auto;
+  background-color: rgb(230, 52, 52);
+  color: white;
+  border: none;
+}
+.recipe button:hover {
+  background-color: rgb(158, 10, 10);
+}
+
+.recipe {
+  background: linear-gradient(135deg, #1f1c2c, #928DAB);
+
+  display: flex;
+  flex-direction: column;
+  color: black;
+  box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1),
+    -5px -5px 10px rgba(34, 34, 34, 0.5);
+  cursor: pointer;
+  border-radius: 10px;
+  max-width: 230px;
+  transition: transform 0.1s ease-in-out;
+
+}
+
+.recipe:hover{
+  transform: scale(1.1);
+}
+
+.recipe-details{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+
+  width: 40%;
+  height: 70%;
+  font-size: 20px;
+  transition: all 0.5 ease-in-out;
+  overflow-y: scroll;
+
+}
+
+.recipe-details::-webkit-scrollbar{
+  width: 10px;
+}
+.recipe-details::-webkit-scrollbar-thumb{
+  background-color: rgb(170, 228, 228);
+  border-radius: 5px;
+  cursor: pointer;
+
+
+}
+
+body::-webkit-scrollbar{
+  width: 15px;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: rgb(126, 150, 150);
+ 
+}
+body::-webkit-scrollbar-track{
+  background-color: rgb(255, 255, 255);
+
+}
+.recipe-detail-content{
+  padding: 45px;
+}
+.recipename{
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: coral;
+}
+.ingredientlist li{
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.recipeinstruction p{
+  line-height: 25px;
+  white-space: pre-line;
+  color: rgb(248, 232, 170);
+
+}
+.recipe-close-btn{
+  border: none;
+  border-radius: 4px;
+  background-color: red;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.favourites-section {
+  margin: 40px auto;
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+  background: linear-gradient(135deg, #1f1c2c, #928DAB);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.favourites-section h2 {
+  margin-bottom: 20px;
+  color: #ffaf7b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.favourites-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-gap: 40px;
+  justify-items: center;
+}
+
+.download-btn {
+  margin-top: 30px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+
+@media screen and (max-width: 600px) {
+  header nav {
+    flex-direction: column;
+  }
+  header nav form {
+    width: 80%;
+    margin-top: 20px;
+  }
+}
